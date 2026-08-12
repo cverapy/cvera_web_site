@@ -130,6 +130,17 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted)}.foot{
 .owner-reset-panel{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 .owner-reset-panel[hidden]{display:none!important}
 
+
+
+/* V5.6 - Botón flotante de WhatsApp */
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:900;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25D366;color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.32);transition:transform .2s ease,box-shadow .2s ease;cursor:pointer}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 16px 38px rgba(0,0,0,.38)}
+.whatsapp-float:focus-visible{outline:3px solid rgba(255,255,255,.9);outline-offset:3px}
+.whatsapp-float svg{width:31px;height:31px;display:block;fill:currentColor}
+.whatsapp-float .whatsapp-tooltip{position:absolute;right:72px;white-space:nowrap;padding:9px 12px;border-radius:10px;background:#0b1b2e;color:#fff;border:1px solid var(--line);font-size:13px;font-weight:800;opacity:0;transform:translateX(6px);pointer-events:none;transition:.2s}
+.whatsapp-float:hover .whatsapp-tooltip,.whatsapp-float:focus-visible .whatsapp-tooltip{opacity:1;transform:none}
+@media(max-width:600px){.whatsapp-float{right:16px;bottom:16px;width:56px;height:56px}.whatsapp-float .whatsapp-tooltip{display:none}}
+
 </style>
 </head>
 <body>
@@ -274,6 +285,16 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted)}.foot{
     </div>
   </div>
 </section>
+
+
+<!-- V5.6 - Acceso directo a WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/595985119997?text=Hola%2C%20quisiera%20realizar%20una%20consulta%20sobre%20seguros." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp" title="Consultar por WhatsApp">
+  <span class="whatsapp-tooltip">Consultar por WhatsApp</span>
+  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.94 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.53-.08 1.6-.65 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"/>
+    <path d="M16.05 3C8.88 3 3.05 8.75 3.05 15.82c0 2.26.6 4.47 1.74 6.41L3 28.75l6.75-1.75a13.09 13.09 0 0 0 6.3 1.62h.01c7.16 0 13-5.75 13-12.82C29.05 8.75 23.22 3 16.05 3zm0 23.46h-.01a10.9 10.9 0 0 1-5.55-1.5l-.4-.24-4 .99 1.07-3.84-.26-.4a10.55 10.55 0 0 1-1.7-5.65c0-5.88 4.87-10.66 10.86-10.66 5.98 0 10.85 4.78 10.85 10.66 0 5.88-4.87 10.64-10.86 10.64z"/>
+  </svg>
+</a>
 
 <footer><div class="wrap foot"><div><strong>CRISTÓBAL FLOR VERA</strong><br>Gestión Técnica · Seguros · Datos · Tecnología</div><div>Perfil profesional · Paraguay</div></div></footer>
 <script>
